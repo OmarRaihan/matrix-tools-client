@@ -18,6 +18,7 @@ import ManageOrders from "./Pages/Dashboard/ManageOrders/ManageOrders";
 import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
 import ManageProducts from "./Pages/Dashboard/ManageProducts/ManageProducts";
+import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
           <Route path="makeAdmin" element={<MakeAdmin/>}></Route>
           <Route path="manageProducts" element={<ManageProducts/>}></Route>
         </Route>
+        <Route path="*" element={<NotFound/>}></Route>
       </Routes>
       <Footer />
     </div>
