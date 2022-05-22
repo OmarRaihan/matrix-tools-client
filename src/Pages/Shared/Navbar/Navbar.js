@@ -15,19 +15,22 @@ const Navbar = () => {
         <Link to="/purchase">Purchase</Link>
       </li>
       <li>
-        <Link to="/review">Review</Link>
-      </li>
-      <li>
-        <Link to="/contact">Contact</Link>
+        <Link to="/products">Products</Link>
       </li>
       <li>
         <Link to="/about">About</Link>
       </li>
-      {user && (
+      <li>
+        <Link to="/dashboard">Dashboard</Link>
+      </li>
+      <li>
+        <Link to="/login">Login</Link>
+      </li>
+      {/* {user && (
         <li>
           <Link to="/dashboard">Dashboard</Link>
         </li>
-      )}
+      )} */}
       <li>
         {/* {user ? (
               <button onClick={logout} className="btn text-white">
@@ -54,7 +57,7 @@ const Navbar = () => {
           </ul>
         </div>
         <p className="btn btn-ghost normal-case text-2xl">
-          <Link to="/home">Matrix Tools</Link>
+          <Link to="/home">MATRIX</Link>
         </p>
       </div>
       <div className="navbar-center hidden lg:flex ml-auto">

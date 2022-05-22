@@ -10,13 +10,13 @@ const Product = ({ product }) => {
           <img className="rounded" src={img} alt="" />
         </figure>
         <div className="card-body items-center text-center info">
-          <h4 className="text-2xl font-bold" style={{ color: "orange" }}>{name}</h4>
+          <h4 className="text-2xl font-bold" style={{ color: "#83BD75" }}>{name}</h4>
           <p>{description.slice(0, 70)}</p>
           <h5>Price: ${price}</h5>
           <h6>Quantity: {availableQuantity}</h6>
           <h6>Minimum Order: {minimumOrder}</h6>
           <div className="card-actions">
-            <button className="btn btn-primary">Order</button>
+            <button style={{backgroundColor: "#36AE7C"}} className="btn border-0 w-64">Order</button>
           </div>
         </div>
       </div>

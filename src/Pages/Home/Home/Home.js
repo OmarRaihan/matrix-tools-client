@@ -9,7 +9,7 @@ const Home = () => {
     <div>
       <Banner />
 
-      <div className="container mx-auto">
+      <div className="container mx-auto mb-20">
         <div className="mt-20 mb-5">
           <h5 className="text-center font-bold text-lg">FEATURED</h5>
           <h2 className="text-center font-bold text-5xl">PRODUCTS</h2>
