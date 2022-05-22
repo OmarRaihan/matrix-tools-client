@@ -1,0 +1,27 @@
+.product-card {
+  width: 365px;
+}
+
+.info p,
+h5,
+h6 {
+  color: gray;
+}
+
+@media screen and (max-width: 540px) {
+  .product-card {
+    width: 325px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .product-card {
+    width: 325px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .product-card {
+    width: 325px;
+  }
+}

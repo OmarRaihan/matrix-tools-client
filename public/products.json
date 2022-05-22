@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "name": "Jaw Bearing Puller",
+        "img": "https://i.ibb.co/jzfssKD/Jaw-Bearing-Puller.jpg",
+        "price": 105,
+        "description": "The top head is heat treated and durable for using. The jaws are well designed to prevent falling off at use. Applicable to assemble and dismantle the ball bearing and wheel gear.",
+        "availableQuantity": 1000,
+        "minimumOrder": 100
+    },
+    {
+        "id": 2,
+        "name": "Aviation Tins Snip",
+        "img": "https://i.ibb.co/RvGhKPc/Aviation-Tins-Snip.jpg",
+        "price": 85,
+        "description": "Toptul. Fixit has the largest collection of toptul brand products including Dr. Reversible Ratchet Handle, Hex Bit Sockets, Impact Wrench etc.",
+        "availableQuantity": 2000,
+        "minimumOrder": 150
+    },
+    {
+        "id": 3,
+        "name": "Adjustable Wrench",
+        "img": "https://i.ibb.co/Fxftdkp/Adjustable-Wrench.jpg",
+        "price": 65,
+        "description": "Yato Brand.Fixit has the largest collection of yato brand products at the best price in BD including screw bit set, impact wrench, air spray gun, pliers & so on!",
+        "availableQuantity": 1500,
+        "minimumOrder": 150
+    },
+    {
+        "id": 4,
+        "name": " Claw Hammer",
+        "img": "https://i.ibb.co/6DkLVpg/Claw-Hammer.jpg",
+        "price": 75,
+        "description": "Yato Brand.Fixit has the largest collection of yato brand products at the best price in BD including screw bit set, impact wrench, air spray gun, pliers & so on!",
+        "availableQuantity": 1500,
+        "minimumOrder": 100
+    },
+    {
+        "id": 5,
+        "name": "Hand Type Rivet Gun",
+        "img": "https://i.ibb.co/nQgbLTX/Hand-Type-Rivet-Gun.jpg",
+        "price": 90,
+        "description": "Harden Brand. Fixit has the largest collection of Harden Brand Tools including tire pressure, ball peen hammer, reversible ratchet, pin punch set, etc.!",
+        "availableQuantity": 1500,
+        "minimumOrder": 100
+    },
+    {
+        "id": 6,
+        "name": "Tool Kit Hans",
+        "img": "https://i.ibb.co/TTFXF5f/Tool-Kit-Hans.jpg",
+        "price": 200,
+        "description": "Fixit has the largest collection of Hans Brand Tools at the best price in Bangladesh. Get this & more hand brand tools right here ",
+        "availableQuantity": 1200,
+        "minimumOrder": 80
+    },
+    {
+        "id": 7,
+        "name": "Heavy Duty Staple Gun",
+        "img": "https://i.ibb.co/GxZ8LCy/Heavy-Duty-Staple-Gun.jpg",
+        "price": 35,
+        "description": "Workpro Hand Tools & Power Tools. Fixit has the largest collection of Workpro Brand tools at the best price in BD including Hand Riveter, Jaw Pipe Wrench, Pipe Wrench, Pliers etc",
+        "availableQuantity": 3000,
+        "minimumOrder": 200
+    },
+    {
+        "id": 8,
+        "name": "Flat Head Screwdriver ",
+        "img": "https://i.ibb.co/Gk9ZZ1D/Flat-Head-Screwdriver.jpg",
+        "price": 15,
+        "description": "Fixit has the largest collection of JETECH Brand Tools including automatic wire stripper, non impact wrench, head screwdriver, hex bit etc.",
+        "availableQuantity": 5000,
+        "minimumOrder": 300
+    },
+    {
+        "id": 9,
+        "name": "Go-through Socket Set",
+        "img": "https://i.ibb.co/6FLwfm3/Go-through-Socket-Set.jpg",
+        "price": 150,
+        "description": "Yato Brand.Fixit has the largest collection of yato brand products at the best price in BD including screw bit set, impact wrench, air spray gun, pliers & so on!",
+        "availableQuantity": 3500,
+        "minimumOrder": 170
+    }
+]
