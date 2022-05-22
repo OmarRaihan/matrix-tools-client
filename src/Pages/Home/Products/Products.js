@@ -6,7 +6,7 @@ import '../Products/Products.css'
 const Products = () => {
   const [products] = useProducts();
   return (
-    <div className="container mb-10">
+    <div className="container mx-auto my-10">
       <h2 className="text-center text-3xl font-bold mt-5">Products: ({products.length})</h2>
       <hr className="w-75 mx-auto mt-2 mb-6" />
       <div className="products-container mb-5">

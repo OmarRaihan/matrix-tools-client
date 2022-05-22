@@ -1,3 +1,4 @@
+import { signOut } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
@@ -5,6 +6,11 @@ import auth from "../../../firebase.init";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
+
+  const logout = () => {
+    signOut(auth);
+    // localStorage.removeItem("accessToken");
+  };
 
   const menuItems = (
     <>
@@ -20,25 +26,19 @@ const Navbar = () => {
       <li>
         <Link to="/about">About</Link>
       </li>
-      <li>
-        <Link to="/dashboard">Dashboard</Link>
-      </li>
-      <li>
-        <Link to="/login">Login</Link>
-      </li>
-      {/* {user && (
+      {user && (
         <li>
           <Link to="/dashboard">Dashboard</Link>
         </li>
-      )} */}
+      )}
       <li>
-        {/* {user ? (
-              <button onClick={logout} className="btn text-white">
+        {user ? (
+              <button style={{backgroundColor: "#36AE7C"}} onClick={logout} className="btn border-0 text-white">
                 SignOut
               </button>
             ) : (
               <Link to="/login">Login</Link>
-            )} */}
+            )}
       </li>
     </>
   );
@@ -52,16 +52,16 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </label>
-          <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+          <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-bold text-2xl">
             {menuItems}
           </ul>
         </div>
-        <p className="btn btn-ghost normal-case text-2xl">
+        <p className="btn btn-ghost normal-case text-3xl">
           <Link to="/home">MATRIX</Link>
         </p>
       </div>
       <div className="navbar-center hidden lg:flex ml-auto">
-        <ul className="menu menu-horizontal p-0">{menuItems}</ul>
+        <ul className="menu menu-horizontal font-bold text-md bor p-0">{menuItems}</ul>
       </div>
       <div className="navbar-end">
         <label tabIndex="1" htmlFor="dashboard-sidebar" className="btn btn-ghost lg:hidden">
