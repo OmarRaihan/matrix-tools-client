@@ -13,7 +13,7 @@ const NewProducts = () => {
   return (
     <div className="grid">
       <div className="container mx-auto my-10">
-        <h2 className="text-center text-5xl font-bold mt-5 mb-10">NEW PRODUCTS</h2>
+        <h2 className="text-center text-5xl font-bold mt-5 mb-10">NEW ARRIVAL</h2>
         <div className="new-products-container mb-5">
           {newProducts.map((newProduct) => (
             <NewProduct key={newProduct.id} newProduct={newProduct}></NewProduct>
