@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "Petrol Operated Chain",
+        "img": "https://i.ibb.co/TgNrHTg/Petrol-Operated-Chain-Saw.jpg",
+        "price": 350,
+        "description": "The top head is heat treated and durable for using. The jaws are well designed to prevent falling off at use. Applicable to assemble and dismantle the ball bearing and wheel gear.",
+        "availableQuantity": 1000,
+        "minimumOrder": 100
+    },
+    {
+        "id": 2,
+        "name": "Angle Grinder Large",
+        "img": "https://i.ibb.co/f2LWBRK/Angle-Grinder-Hi-Koki.jpg",
+        "price": 190,
+        "description": "The top head is heat treated and durable for using. The jaws are well designed to prevent falling off at use. Applicable to assemble and dismantle the ball bearing and wheel gear.",
+        "availableQuantity": 2000,
+        "minimumOrder": 200
+    },
+    {
+        "id": 3,
+        "name": "Cordless Drill Machine",
+        "img": "https://i.ibb.co/k1ZfL4t/Cordless-Drill-Machine.jpg",
+        "price": 200,
+        "description": "The top head is heat treated and durable for using. The jaws are well designed to prevent falling off at use. Applicable to assemble and dismantle the ball bearing and wheel gear.",
+        "availableQuantity": 1500,
+        "minimumOrder": 200
+    },
+    {
+        "id": 4,
+        "name": "Large Disc Grinder",
+        "img": "https://i.ibb.co/wL0cJMM/Large-Disc-Grinder.jpg",
+        "price": 250,
+        "description": "The top head is heat treated and durable for using. The jaws are well designed to prevent falling off at use. Applicable to assemble and dismantle the ball bearing and wheel gear.",
+        "availableQuantity": 1500,
+        "minimumOrder": 200
+    },
+    
+    {
+        "id": 5,
+        "name": "Cordless Drill Machine",
+        "img": "https://i.ibb.co/Wf654R0/Cordless-Drill-Machine-2.jpg",
+        "price": 250,
+        "description": "The top head is heat treated and durable for using. The jaws are well designed to prevent falling off at use. Applicable to assemble and dismantle the ball bearing and wheel gear.",
+        "availableQuantity": 1500,
+        "minimumOrder": 200
+    },
+    {
+        "id": 6,
+        "name": "Impact Drill Machine",
+        "img": "https://i.ibb.co/wdpZFLN/Impact-Drill-Machine.jpg",
+        "price": 300,
+        "description": "The top head is heat treated and durable for using. The jaws are well designed to prevent falling off at use. Applicable to assemble and dismantle the ball bearing and wheel gear.",
+        "availableQuantity": 1500,
+        "minimumOrder": 200
+    }
+]

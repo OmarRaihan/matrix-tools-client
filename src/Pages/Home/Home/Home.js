@@ -1,19 +1,20 @@
 import React from "react";
 import useProducts from "../../Hooks/useProducts/useProducts";
 import Banner from "../Banner/Banner";
+import Capabilities from "../Capabilities/Capabilities";
+import NewProducts from "../NewProducts/NewProducts";
 import Product from "../Product/Product";
 
 const Home = () => {
-    const [products] = useProducts()
+  const [products] = useProducts();
   return (
     <div>
       <Banner />
 
       <div className="container mx-auto mb-20">
-        <div className="mt-20 mb-5">
+        <div className="mt-20 mb-20">
           <h5 className="text-center font-bold text-lg">FEATURED</h5>
           <h2 className="text-center font-bold text-5xl">PRODUCTS</h2>
-          <hr className="w-75 mx-auto mt-3" />
         </div>
         <div className="products-container">
           {products.slice(0, 6).map((product) => (
@@ -21,6 +22,8 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Capabilities />
+      <NewProducts />
     </div>
   );
 };

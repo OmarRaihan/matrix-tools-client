@@ -1,4 +1,4 @@
-.product-card {
+.new-product-card {
   width: 400px;
 }
 
@@ -9,19 +9,19 @@ h6 {
 }
 
 @media screen and (max-width: 540px) {
-  .product-card {
+  .new-product-card {
     width: 325px;
   }
 }
 
 @media screen and (max-width: 992px) {
-  .product-card {
+  .new-product-card {
     width: 325px;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .product-card {
+  .new-product-card {
     width: 325px;
   }
 }

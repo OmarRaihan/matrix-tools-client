@@ -14,37 +14,28 @@ const Navbar = () => {
 
   const menuItems = (
     <>
-      <li>
+      <li style={{border: '4px solid #36AE7C'}}>
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li style={{border: '4px solid #36AE7C'}}>
         <Link to="/purchase">Purchase</Link>
       </li>
-      <li>
+      <li style={{border: '4px solid #36AE7C'}}>
         <Link to="/products">Products</Link>
       </li>
-      <li>
+      <li style={{border: '4px solid #36AE7C'}}>
         <Link to="/about">About</Link>
       </li>
       {user && (
-        <li>
+        <li style={{border: '4px solid #36AE7C'}}>
           <Link to="/dashboard">Dashboard</Link>
         </li>
       )}
-      <li>
-        {user ? (
-              <button style={{backgroundColor: "#36AE7C"}} onClick={logout} className="btn border-0 text-white">
-                SignOut
-              </button>
-            ) : (
-              <Link to="/login">Login</Link>
-            )}
-      </li>
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 sticky top-0 z-50">
+    <div className="navbar bg-base-100 sticky top-0 z-50 py-4">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -57,7 +48,7 @@ const Navbar = () => {
           </ul>
         </div>
         <p className="btn btn-ghost normal-case text-3xl">
-          <Link to="/home">MATRIX</Link>
+          {/* <Link to="/home">MATRIX</Link> */}
         </p>
       </div>
       <div className="navbar-center hidden lg:flex ml-auto">

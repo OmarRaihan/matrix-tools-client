@@ -1,7 +1,7 @@
 import React from "react";
 import useProducts from "../../Hooks/useProducts/useProducts";
 import Product from "../Product/Product";
-import '../Products/Products.css'
+import "../Products/Products.css";
 
 const Products = () => {
   const [products] = useProducts();

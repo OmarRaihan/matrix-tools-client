@@ -19,10 +19,12 @@ import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
 import ManageProducts from "./Pages/Dashboard/ManageProducts/ManageProducts";
 import NotFound from "./Pages/NotFound/NotFound";
+import Topbar from "./Pages/Shared/Topbar/Topbar";
 
 function App() {
   return (
     <div>
+      <Topbar/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
