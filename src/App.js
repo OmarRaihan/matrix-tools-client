@@ -22,11 +22,13 @@ import NotFound from "./Pages/NotFound/NotFound";
 import Topbar from "./Pages/Shared/Topbar/Topbar";
 import NewProducts from "./Pages/Home/NewProducts/NewProducts";
 import Blogs from "./Pages/Blogs/Blogs";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <div>
-      <Topbar/>
+      <Topbar />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -53,17 +55,18 @@ function App() {
             </RequireAuth>
           }
         >
-          <Route index element={<MyOrder/>}></Route>
-          <Route path="review" element={<AddReview/>}></Route>
-          <Route path="profile" element={<MyProfile/>}></Route>
-          <Route path="manageOrders" element={<ManageOrders/>}></Route>
-          <Route path="AddProduct" element={<AddProduct/>}></Route>
-          <Route path="makeAdmin" element={<MakeAdmin/>}></Route>
-          <Route path="manageProducts" element={<ManageProducts/>}></Route>
+          <Route index element={<MyOrder />}></Route>
+          <Route path="review" element={<AddReview />}></Route>
+          <Route path="profile" element={<MyProfile />}></Route>
+          <Route path="manageOrders" element={<ManageOrders />}></Route>
+          <Route path="AddProduct" element={<AddProduct />}></Route>
+          <Route path="makeAdmin" element={<MakeAdmin />}></Route>
+          <Route path="manageProducts" element={<ManageProducts />}></Route>
         </Route>
-        <Route path="*" element={<NotFound/>}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }
