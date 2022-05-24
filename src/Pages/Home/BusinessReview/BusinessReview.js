@@ -9,7 +9,7 @@ const BusinessReview = () => {
         OUR BUSINESS TRUST
       </h1>
       <p className="text-center text-lg font-bold">TRY TO UNDERSTAND USERS EXPERIENCES</p>
-      <div className="review-card flex items-center mt-40">
+      <div className="business-review-card flex items-center mt-40">
         <div className="card w-auto">
           <p style={{ color: "#36AE7C" }} className="text-center text-5xl">
             {/* <i className="fa-solid fa-font-awesome"></i> */}

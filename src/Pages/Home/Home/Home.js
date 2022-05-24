@@ -5,6 +5,7 @@ import BusinessReview from "../BusinessReview/BusinessReview";
 import Capabilities from "../Capabilities/Capabilities";
 import NewProducts from "../NewProducts/NewProducts";
 import Product from "../Product/Product";
+import Reviews from "../Reviews/Reviews";
 
 const Home = () => {
   const [products] = useProducts();
@@ -23,6 +24,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Reviews />
       <Capabilities />
       <NewProducts />
       <BusinessReview />

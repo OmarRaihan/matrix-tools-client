@@ -24,6 +24,7 @@ const AddReview = () => {
       purchaseId: purchaseId,
       img: event.target.img.value,
       name: event.target.name.value,
+      ratings: event.target.ratings.value,
       reviews: event.target.reviews.value,
       email: user?.email,
     };
@@ -52,6 +53,7 @@ const AddReview = () => {
           name="img"
           value={user?.photoURL}
           autoComplete="off"
+          disabled
           {...register("img", { required: true })}
         />
 
@@ -62,11 +64,19 @@ const AddReview = () => {
           name="name"
           value={user?.displayName}
           autoComplete="off"
+          disabled
           {...register("name", { required: true })}
         />
 
         <input
           className="input input-bordered text-lg w-full max-w-xs"
+          placeholder="Ratings"
+          type="number"
+          name="ratings"
+          {...register("ratings", { required: true }, { min: 1, max: 5 })}
+        />
+        <textarea
+          className="textarea textarea-bordered text-lg w-full max-w-xs"
           placeholder="Review"
           type="number"
           name="reviews"
