@@ -53,7 +53,7 @@ const Reviews = () => {
           </div>
         ))}
       </div>
-      <hr className="mt-4" />
+      <hr className="mt-4 mb-10" />
     </div>
   );
 };
