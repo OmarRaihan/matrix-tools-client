@@ -15,7 +15,7 @@ const Topbar = () => {
   const menuItems = (
     <>
       <li>
-        <Link to="/products">Products</Link>
+        <Link to="/about">About</Link>
       </li>
       <li>
         {user ? (

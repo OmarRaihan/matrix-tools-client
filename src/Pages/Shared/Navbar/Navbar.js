@@ -14,20 +14,33 @@ const Navbar = () => {
 
   const menuItems = (
     <>
-      <li style={{border: '4px solid #36AE7C'}}>
+      <li className="border-r">
         <Link to="/">Home</Link>
       </li>
-      <li style={{border: '4px solid #36AE7C'}}>
-        <Link to="/purchase">Purchase</Link>
+      <li className="border-r">
+        <Link to="/blogs">Blogs</Link>
       </li>
-      <li style={{border: '4px solid #36AE7C'}}>
+      <li className="border-r">
         <Link to="/products">Products</Link>
       </li>
-      <li style={{border: '4px solid #36AE7C'}}>
-        <Link to="/about">About</Link>
+      <li className="border-r">
+        <Link to="/NewProducts">New</Link>
       </li>
+      {/* <div class="dropdown border-r">
+        <label tabIndex="0" className="btn btn-ghost font-bold text-lg m-1">
+          Products
+        </label>
+        <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+          <li>
+          <Link to="/products">Featured</Link>
+          </li>
+          <li>
+          <Link to="/NewProducts">New</Link>
+          </li>
+        </ul>
+      </div> */}
       {user && (
-        <li style={{border: '4px solid #36AE7C'}}>
+        <li className="border-r">
           <Link to="/dashboard">Dashboard</Link>
         </li>
       )}
@@ -35,7 +48,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 sticky top-0 z-50 py-4">
+    <div className="navbar bg-base-100 border-b sticky top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -43,16 +56,13 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </label>
-          <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-bold text-2xl">
+          <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-bold">
             {menuItems}
           </ul>
         </div>
-        <p className="btn btn-ghost normal-case text-3xl">
-          {/* <Link to="/home">MATRIX</Link> */}
-        </p>
       </div>
       <div className="navbar-center hidden lg:flex ml-auto">
-        <ul className="menu menu-horizontal font-bold text-md bor p-0">{menuItems}</ul>
+        <ul className="menu menu-horizontal font-bold text-md p-0">{menuItems}</ul>
       </div>
       <div className="navbar-end">
         <label tabIndex="1" htmlFor="dashboard-sidebar" className="btn btn-ghost lg:hidden">

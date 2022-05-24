@@ -11,7 +11,7 @@ const Products = () => {
       <hr className="w-75 mx-auto mt-2 mb-6" />
       <div className="products-container mb-5">
         {products.map((product) => (
-          <Product key={product.id} product={product}></Product>
+          <Product key={product._id} product={product}></Product>
         ))}
       </div>
     </div>

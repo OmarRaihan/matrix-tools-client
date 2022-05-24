@@ -1,6 +1,6 @@
 import React from "react";
 import "../../Shared/Footer/Footer.css";
-import footer from "../../../images/Footer-3.jpg";
+import footer from "../../../images/Footer-5.jpg";
 
 const Footer = () => {
   const today = new Date();
