@@ -4,27 +4,28 @@ import auth from "../../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../../Shared/Loading/Loading";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import useToken from "../../Hooks/useToken/useToken";
 
 const Login = () => {
   const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
 
-//   const [token] = useToken(user || userGoogle);
+  const [token] = useToken(user || userGoogle);
 
   let signInError;
   const navigate = useNavigate();
   const location = useLocation();
   let from = location.state?.from?.pathname || "/";
 
-//   useEffect(() => {
-//     if (token) { 
-//       navigate(from, { replace: true });
-//     }
-//   }, [token, from, navigate]);
+  useEffect(() => {
+    if (token) {
+      navigate(from, { replace: true });
+    }
+  }, [token, from, navigate]);
 
-if(user || userGoogle){
+  if (user || userGoogle) {
     navigate(from, { replace: true });
-}
+  }
 
   const {
     register,
@@ -105,7 +106,7 @@ if(user || userGoogle){
               </label>
             </div>
             {/* Button */}
-            <input style={{backgroundColor: "#36AE7C"}} className="btn w-full border-0 max-w-xs" type="submit" value="Login" />
+            <input style={{ backgroundColor: "#36AE7C" }} className="btn w-full border-0 max-w-xs" type="submit" value="Login" />
             {signInError}
 
             <p className="text-sm my-2 text-center">

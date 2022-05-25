@@ -4,6 +4,7 @@ import auth from "../../../firebase.init";
 import { useForm } from "react-hook-form";
 import Loading from "../../Shared/Loading/Loading";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import useToken from "../../Hooks/useToken/useToken";
 // import useToken from "../../../hooks/useToken";
 
 const Register = () => {
@@ -11,7 +12,7 @@ const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-  //   const [token] = useToken(user || userGoogle);
+  const [token] = useToken(user || userGoogle);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -37,11 +38,7 @@ const Register = () => {
     return <Loading />;
   }
 
-  //   if (token) {
-  //     navigate("/appointment");
-  //   }
-
-  if (user || userGoogle) {
+  if (token) {
     navigate(from, { replace: true });
   }
 
@@ -60,9 +57,7 @@ const Register = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* Name Field */}
             <div className="form-control w-full max-w-xs">
-              {/* <label className="label">
-                <span className="label-text text-lg">Name</span>
-              </label> */}
+              {/* Name Field */}
               <input
                 type="text"
                 placeholder="Name"
@@ -82,9 +77,7 @@ const Register = () => {
 
             {/* Email Field */}
             <div className="form-control w-full max-w-xs">
-              {/* <label className="label">
-                <span className="label-text text-lg">Email</span>
-              </label> */}
+              {/* Email Field */}
               <input
                 type="email"
                 placeholder="Email"
@@ -107,9 +100,7 @@ const Register = () => {
             </div>
             {/* Password Field */}
             <div className="form-control w-full max-w-xs">
-              {/* <label className="label">
-                <span className="label-text text-lg">Password</span>
-              </label> */}
+              {/* Password Field */}
               <input
                 type="password"
                 placeholder="Password"
@@ -131,7 +122,7 @@ const Register = () => {
               </label>
             </div>
             {/* Button */}
-            <input style={{backgroundColor: "#36AE7C"}}  className="btn border-0 w-full max-w-xs" type="submit" value="Signup" />
+            <input style={{ backgroundColor: "#36AE7C" }} className="btn border-0 w-full max-w-xs" type="submit" value="Signup" />
             {signInError}
 
             <p className="text-sm my-2 text-center">

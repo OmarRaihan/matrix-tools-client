@@ -1,16 +1,9 @@
-import React, { useEffect, useState } from "react";
 import useNewProducts from "../../Hooks/useNewProducts/useNewProducts";
-import NewProduct from "../NewProduct/NewProduct";
 import "../NewProducts/NewProducts.css";
 
 const NewProducts = () => {
   const [newProducts] = useNewProducts();
 
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/newProduct")
-  //     .then((res) => res.json())
-  //     .then((data) => setNewProducts(data));
-  // }, []);
   return (
     // <div className="grid">
     //   <div className="container mx-auto my-10">

@@ -9,7 +9,7 @@ const Topbar = () => {
 
   const logout = () => {
     signOut(auth);
-    // localStorage.removeItem("accessToken");
+    localStorage.removeItem("accessToken");
   };
 
   const menuItems = (
@@ -31,7 +31,7 @@ const Topbar = () => {
   return (
     <div className="navbar bg-base-100 border-b">
       <div className="navbar-start flex">
-        <div className="w-52 ml-10">
+        <div className="w-52">
           <p style={{ color: "#36AE7C" }} className="btn btn-ghost normal-case font-bold text-3xl">
             <Link to="/home">MATRIX</Link>
           </p>
@@ -39,8 +39,8 @@ const Topbar = () => {
             {menuItems}
           </ul> */}
         </div>
-        <div className="btn btn-ghost normal-case hidden lg:flex mx-auto">
-          <p className="mr-10">Office: 0721-765640</p>
+        <div className="btn btn-ghost normal-case hidden md:flex mx-auto">
+          <p className="mr-6">Office: 0721-765640</p>
           <p>Mail: matrix@gmail.com</p>
         </div>
       </div>
