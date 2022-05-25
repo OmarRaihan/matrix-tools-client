@@ -29,7 +29,7 @@ const AddReview = () => {
       email: user?.email,
     };
 
-    // Item Added to bike collection
+    // Item Added to Review Collection
     axios
       .post("http://localhost:5000/review", review)
 

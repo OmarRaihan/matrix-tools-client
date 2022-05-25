@@ -3,7 +3,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import useProducts from "../../Hooks/useProducts/useProducts";
-import '../ManageProducts/ManageProducts.css'
+import ManageNewProducts from "../ManageNewProducts/ManageNewProducts";
+import "../ManageProducts/ManageProducts.css";
 
 const ManageProducts = () => {
   const [products, setProducts] = useProducts();
@@ -41,9 +42,9 @@ const ManageProducts = () => {
   return (
     <div>
       <div className="table-container my-5">
-        <div>
+        <div className="mt-15">
           <h2 className="text-center text-xl font-semibold">FEATURED</h2>
-          <h2 className="text-center text-3xl font-bold">PRODUCTS</h2>
+          <h2 className="text-center text-3xl font-bold mb-2">PRODUCTS</h2>
           <hr />
         </div>
         <table>
@@ -62,7 +63,7 @@ const ManageProducts = () => {
               <tr key={p._id} className="data-row">
                 <td>
                   {" "}
-                  <img className="w-24 rounded-lg" src={p.img} alt="" />
+                  <img className="w-20 rounded-lg" src={p.img} alt="" />
                 </td>
                 <td>{p.name}</td>
                 <td>${p.price}</td>
@@ -70,7 +71,7 @@ const ManageProducts = () => {
                 <td>{p.minimumOrder}</td>
                 <td>
                   <div>
-                    <button style={{backgroundColor: "#36AE7C"}} className="btn border-0" onClick={() => handleDelete(p._id)}>
+                    <button style={{ backgroundColor: "#36AE7C" }} className="btn border-0" onClick={() => handleDelete(p._id)}>
                       Delete
                     </button>
                   </div>
@@ -79,12 +80,16 @@ const ManageProducts = () => {
             ))}
           </tbody>
         </table>
-
-        <div className="text-center my-10">
-          <button onClick={navigateToAddItem} style={{backgroundColor: "#36AE7C"}} className="add-item-btn btn border-0">
-            Add Item
-          </button>
-        </div>
+      </div>
+      {/* Manage New Product */}
+      <div>
+        <ManageNewProducts />
+      </div>
+      {/* Add new Product Button */}
+      <div className="text-center my-10">
+        <button onClick={navigateToAddItem} style={{ backgroundColor: "#36AE7C" }} className="add-item-btn btn border-0">
+          Add Product
+        </button>
       </div>
     </div>
   );
