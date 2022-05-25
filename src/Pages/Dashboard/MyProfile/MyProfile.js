@@ -35,17 +35,17 @@ const MyProfile = () => {
           </div>
           <div className="mb-6">
             <p className="font-bold text-gray-400">Education</p>
-            <p className="text-xl font-semibold">{user?.email}</p>
+            <p className="text-xl font-semibold"></p>
             <hr />
           </div>
           <div className="mb-6">
             <p className="font-bold text-gray-400">Area</p>
-            <p className="text-xl font-semibold">{user?.email}</p>
+            <p className="text-xl font-semibold"></p>
             <hr />
           </div>
           <div className="mb-6">
             <p className="font-bold text-gray-400">Social Links</p>
-            <p className="text-xl font-semibold">{user?.email}</p>
+            <p className="text-xl font-semibold"></p>
             <hr />
           </div>
         </div>

@@ -1,5 +1,7 @@
+import axios from "axios";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const OrderModal = ({ order }) => {
@@ -8,8 +10,27 @@ const OrderModal = ({ order }) => {
 
   const handleOrder = (event) => {
     event.preventDefault();
-    const address = event.target.address.value;
-    console.log(address);
+
+    const order = {
+      name: user?.displayName,
+      email: user?.email,
+      address: event.target.address.value,
+      phone: event.target.phone.value,
+      quantity: event.target.quantity.value,
+    };
+
+    axios
+      .post("http://localhost:5000/order", order)
+
+      .then((response) => {
+        const { data } = response;
+        if (data.insertedId) {
+          toast("Order is added.");
+        } else {
+          toast.error("Order is failed to add.");
+        }
+        event.target.reset();
+      });
   };
 
   return (

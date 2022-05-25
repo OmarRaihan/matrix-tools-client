@@ -1,8 +1,10 @@
+import axios from "axios";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
-const ProfileModal = ({ profile }) => {
+const ProfileModal = () => {
   const [user] = useAuthState(auth);
 
   const handleProfile = (event) => {
@@ -11,7 +13,37 @@ const ProfileModal = ({ profile }) => {
       education: event.target.education.value,
       location: event.target.location.value,
       social: event.target.social.value,
+      email: user?.email,
     };
+
+    // Item Added to bike collection
+    // axios
+    //   .post("http://localhost:5000/", profile)
+
+    //   .then((response) => {
+    //     const { data } = response;
+    //     if (data.insertedId) {
+    //       toast("Profile is set");
+    //     } else {
+    //       toast.error("Profile is failed to set");
+    //     }
+    //   });
+
+    fetch("http://localhost:5000/profile", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(profile),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          toast("Profile is set");
+        } else {
+          toast.error("Profile is failed to set");
+        }
+      });
   };
   return (
     <div>
