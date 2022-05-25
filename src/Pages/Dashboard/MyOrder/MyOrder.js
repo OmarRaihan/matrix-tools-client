@@ -14,7 +14,7 @@ const MyOrder = () => {
       fetch(`http://localhost:5000/order/${user?.email}`, {
         method: "GET",
         headers: {
-          // authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
       })
         .then((res) => res.json())
@@ -31,7 +31,7 @@ const MyOrder = () => {
         <table className="table w-full">
           <thead>
             <tr>
-              <th></th>
+              <th>No.</th>
               <th>Name</th>
               <th>Address</th>
               <th>Phone</th>

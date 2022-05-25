@@ -16,7 +16,6 @@ import AddReview from "./Pages/Dashboard/AddReview/AddReview";
 import MyProfile from "./Pages/Dashboard/MyProfile/MyProfile";
 import ManageOrders from "./Pages/Dashboard/ManageOrders/ManageOrders";
 import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
-import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
 import ManageProducts from "./Pages/Dashboard/ManageProducts/ManageProducts";
 import NotFound from "./Pages/NotFound/NotFound";
 import Topbar from "./Pages/Shared/Topbar/Topbar";
@@ -24,6 +23,7 @@ import NewProducts from "./Pages/Home/NewProducts/NewProducts";
 import Blogs from "./Pages/Blogs/Blogs";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ManageAdmin from "./Pages/Dashboard/ManageAdmin/ManageAdmin";
 
 function App() {
   return (
@@ -60,7 +60,7 @@ function App() {
           <Route path="profile" element={<MyProfile />}></Route>
           <Route path="manageOrders" element={<ManageOrders />}></Route>
           <Route path="addProduct" element={<AddProduct />}></Route>
-          <Route path="makeAdmin" element={<MakeAdmin />}></Route>
+          <Route path="admin" element={<ManageAdmin />}></Route>
           <Route path="manageProducts" element={<ManageProducts />}></Route>
         </Route>
         <Route path="*" element={<NotFound />}></Route>
