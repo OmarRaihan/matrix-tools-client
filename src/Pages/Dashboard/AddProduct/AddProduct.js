@@ -11,7 +11,6 @@ import "../AddProduct/AddProduct.css";
 const AddProduct = () => {
   const { purchaseId } = useParams();
   const [user] = useAuthState(auth);
-  console.log(user);
   const navigate = useNavigate();
   const { register } = useForm();
 

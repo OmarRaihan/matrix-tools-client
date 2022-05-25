@@ -59,7 +59,7 @@ function App() {
           <Route path="review" element={<AddReview />}></Route>
           <Route path="profile" element={<MyProfile />}></Route>
           <Route path="manageOrders" element={<ManageOrders />}></Route>
-          <Route path="AddProduct" element={<AddProduct />}></Route>
+          <Route path="addProduct" element={<AddProduct />}></Route>
           <Route path="makeAdmin" element={<MakeAdmin />}></Route>
           <Route path="manageProducts" element={<ManageProducts />}></Route>
         </Route>

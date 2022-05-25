@@ -5,7 +5,7 @@ import auth from "../../../firebase.init";
 import useProducts from "../../Hooks/useProducts/useProducts";
 import '../ManageProducts/ManageProducts.css'
 
-const ManageProducts = () => {
+const ManageNewProducts = () => {
   const [products, setProducts] = useProducts();
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
@@ -28,10 +28,6 @@ const ManageProducts = () => {
         });
     }
     window.location.reload();
-  };
-
-  const navigateToAddItem = () => {
-    navigate("/dashboard/addProduct");
   };
 
   if (!user) {
@@ -79,15 +75,9 @@ const ManageProducts = () => {
             ))}
           </tbody>
         </table>
-
-        <div className="text-center my-10">
-          <button onClick={navigateToAddItem} style={{backgroundColor: "#36AE7C"}} className="add-item-btn btn border-0">
-            Add Item
-          </button>
-        </div>
       </div>
     </div>
   );
 };
 
-export default ManageProducts;
+export default ManageNewProducts;
