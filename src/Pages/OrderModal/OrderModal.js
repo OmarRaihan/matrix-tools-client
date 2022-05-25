@@ -3,7 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
 const OrderModal = ({ order }) => {
-  const { name, price, availableQuantity } = order;
+  const { name } = order;
   const [user] = useAuthState(auth);
 
   const handleOrder = (event) => {

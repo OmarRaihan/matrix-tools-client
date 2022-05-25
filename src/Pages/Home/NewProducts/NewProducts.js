@@ -6,7 +6,7 @@ const NewProducts = () => {
   const [newProducts, setNewProducts] = useState([]);
 
   useEffect(() => {
-    fetch("newArrival.json")
+    fetch("http://localhost:5000/newProduct")
       .then((res) => res.json())
       .then((data) => setNewProducts(data));
   }, []);
@@ -25,13 +25,15 @@ const NewProducts = () => {
     // new
 
     <div>
-       <h2 className="text-center text-5xl font-bold mt-16">NEW ARRIVAL</h2>
+      <h2 className="text-center text-5xl font-bold mt-16">NEW ARRIVAL</h2>
       <div className="new-product-container mx-auto">
         <input type="radio" name="dot" id="one" />
         <input type="radio" name="dot" id="two" />
+        <input type="radio" name="dot" id="three" />
+        <input type="radio" name="dot" id="four" />
         <div className="main-card">
           {newProducts.map((product) => (
-            <div key={product.id} product={product}>
+            <div key={product._id} product={product}>
               <div className="new-product-cards card card-body">
                 <div className="new-card">
                   <div className="content">
@@ -59,6 +61,8 @@ const NewProducts = () => {
         <div className="button">
           <label htmlFor="one" className=" active one"></label>
           <label htmlFor="two" className="two"></label>
+          <label htmlFor="three" className="three"></label>
+          <label htmlFor="four" className="four"></label>
         </div>
       </div>
     </div>

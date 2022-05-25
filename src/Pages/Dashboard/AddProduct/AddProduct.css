@@ -1,0 +1,9 @@
+.add-product-form {
+  width: 30%;
+}
+
+@media screen and (max-width: 576px) {
+  .add-product-form {
+    width: 85%;
+  }
+}

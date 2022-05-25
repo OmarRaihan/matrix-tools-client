@@ -65,8 +65,17 @@ body::before{
   width: 200%;
   transition: 1s;
 }
+#one:checked ~ .main-card{
+  margin-left: 15%;
+}
 #two:checked ~ .main-card{
+  margin-left: -75%;
+}
+#three:checked ~ .main-card{
   margin-left: -100%;
+}
+#four:checked ~ .main-card{
+  margin-left: -115%;
 }
 .new-product-container .main-card .new-product-cards{
   /* width: calc(100% / 2 - 10px); */
@@ -98,21 +107,22 @@ body::before{
 .new-product-cards .new-card .content .img{
   height: 230px;
   width: 230px;
-  border-radius: 50%;
-  padding: 3px;
-  background: #36AE7C;
+
+  /* border-radius: 5%;
+  padding: 5px;
+  background: #36AE7C; */
   margin-bottom: 14px;
 }
 .new-card .content .img img{
   height: 100%;
   width: 100%;
-  border: 3px solid #ffff;
-  border-radius: 50%;
-  object-fit: cover;
+  /* border: 3px solid #ffff;
+  border-radius: 5%;
+  object-fit: cover; */
 }
 .new-card .content .name{
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   color: #36AE7C;
 }
 .new-card .content .job{
@@ -171,6 +181,18 @@ body::before{
 }
 #two:checked ~ .button .two{
   width: 35px;
+}
+#three:checked ~ .button .three{
+  width: 35px;
+}
+#three:checked ~ .button .two{
+  width: 15px;
+}
+#four:checked ~ .button .four{
+  width: 35px;
+}
+#four:checked ~ .button .three{
+  width: 15px;
 }
 input[type="radio"]{
   display: none;
