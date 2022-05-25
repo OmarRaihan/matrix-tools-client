@@ -35,7 +35,7 @@ const MyProfile = () => {
           </div>
           <div className="mb-6">
             <p className="font-bold text-gray-400">Education</p>
-            <p className="text-xl font-semibold"></p>
+            <p className="text-xl font-semibold">{profile?.education}</p>
             <hr />
           </div>
           <div className="mb-6">
