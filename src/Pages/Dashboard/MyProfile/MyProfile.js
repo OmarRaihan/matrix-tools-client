@@ -6,7 +6,7 @@ import "../MyProfile/MyProfile.css";
 
 const MyProfile = () => {
   const [user] = useAuthState(auth);
-  const [profile, setProfile] = useState();
+  const [profile, setProfile] = useState([]);
 
   useEffect(() => {
     if (user) {
