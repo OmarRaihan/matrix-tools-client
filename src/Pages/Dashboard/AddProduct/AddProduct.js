@@ -34,7 +34,7 @@ const AddProduct = () => {
 
     // Item Added to bike collection
     axios
-      .post("http://localhost:5000/newProduct", newProduct)
+      .post("https://thawing-hamlet-83781.herokuapp.com/newProduct", newProduct)
 
       .then((response) => {
         const { data } = response;

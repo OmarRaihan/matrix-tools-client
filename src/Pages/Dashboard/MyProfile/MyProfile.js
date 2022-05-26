@@ -10,7 +10,7 @@ const MyProfile = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/profile`, {
+      fetch(`https://thawing-hamlet-83781.herokuapp.com/profile`, {
         method: "GET",
         headers: {
           //   authorization: `Bearer ${localStorage.getItem("accessToken")}`,

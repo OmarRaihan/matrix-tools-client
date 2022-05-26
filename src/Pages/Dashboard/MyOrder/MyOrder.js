@@ -11,7 +11,7 @@ const MyOrder = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/order/${user?.email}`, {
+      fetch(`https://thawing-hamlet-83781.herokuapp.com/order/${user?.email}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -28,7 +28,7 @@ const MyOrder = () => {
     const proceed = window.confirm("Are you sure to delete?");
     if (proceed) {
       console.log("deleted", id);
-      const url = `http://localhost:5000/order/${id}`;
+      const url = `https://thawing-hamlet-83781.herokuapp.com/order/${id}`;
       fetch(url, {
         method: "DELETE",
       })

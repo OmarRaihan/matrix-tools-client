@@ -32,7 +32,7 @@ const AddReview = () => {
 
     // Review Added to Review Collection
     axios
-      .post("http://localhost:5000/review", review)
+      .post("https://thawing-hamlet-83781.herokuapp.com/review", review)
 
       .then((response) => {
         const { data } = response;

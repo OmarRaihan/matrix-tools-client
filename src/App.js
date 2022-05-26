@@ -41,10 +41,17 @@ function App() {
         <Route path="/products" element={<Products />}></Route>
         <Route path="/NewProducts" element={<NewProducts />}></Route>
         <Route path="/reviews" element={<Reviews />}></Route>
-        <Route path="/portfolio" element={<MyPortfolio />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
+        <Route
+          path="/portfolio"
+          element={
+            <RequireAuth>
+              <MyPortfolio />
+            </RequireAuth>
+          }
+        ></Route>
         <Route
           path="/purchase/:purchaseId"
           element={

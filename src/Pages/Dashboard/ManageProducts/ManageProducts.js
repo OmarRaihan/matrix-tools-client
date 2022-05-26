@@ -15,7 +15,7 @@ const ManageProducts = () => {
     const proceed = window.confirm("Are you sure to delete?");
     if (proceed) {
       console.log("deleted", id);
-      const url = `http://localhost:5000/product/${id}`;
+      const url = `https://thawing-hamlet-83781.herokuapp.com/product/${id}`;
       fetch(url, {
         method: "DELETE",
       })

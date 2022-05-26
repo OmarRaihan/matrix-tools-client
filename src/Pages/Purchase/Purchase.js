@@ -12,7 +12,7 @@ const Purchase = () => {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    const url = `http://localhost:5000/product/${purchaseId}`;
+    const url = `https://thawing-hamlet-83781.herokuapp.com/product/${purchaseId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data));

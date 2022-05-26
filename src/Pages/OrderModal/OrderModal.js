@@ -25,7 +25,7 @@ const OrderModal = ({ order }) => {
     console.log(order);
 
     axios
-      .post("http://localhost:5000/order", order)
+      .post("https://thawing-hamlet-83781.herokuapp.com/order", order)
 
       .then((response) => {
         const { data } = response;

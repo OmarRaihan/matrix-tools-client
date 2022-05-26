@@ -13,7 +13,7 @@ const Reviews = () => {
   useEffect(() => {
     const getReview = async () => {
       //   const email = user?.email;
-      const url = `http://localhost:5000/review`;
+      const url = `https://thawing-hamlet-83781.herokuapp.com/review`;
       const { data } = await axios.get(url);
       setReviews(data);
     };

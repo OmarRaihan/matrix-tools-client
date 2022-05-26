@@ -13,7 +13,7 @@ const ManageNewProducts = () => {
     const proceed = window.confirm("Are you sure to delete?");
     if (proceed) {
       console.log("deleted", id);
-      const url = `http://localhost:5000/newProduct/${id}`;
+      const url = `https://thawing-hamlet-83781.herokuapp.com/newProduct/${id}`;
       fetch(url, {
         method: "DELETE",
       })

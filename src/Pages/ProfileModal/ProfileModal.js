@@ -18,7 +18,7 @@ const ProfileModal = () => {
     };
 
     axios
-      .post("http://localhost:5000/profile", profile)
+      .post("https://thawing-hamlet-83781.herokuapp.com/profile", profile)
 
       .then((response) => {
         const { data } = response;

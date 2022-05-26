@@ -10,7 +10,7 @@ const ManageOrders = () => {
 
   useEffect(() => {
     if (user) {
-      fetch("http://localhost:5000/order", {
+      fetch("https://thawing-hamlet-83781.herokuapp.com/order", {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem("accessToken")}`,
