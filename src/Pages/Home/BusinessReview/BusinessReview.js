@@ -52,9 +52,9 @@ const BusinessReview = () => {
             <i className="fa-solid fa-comment-dots"></i>
           </p>
           <div className="card-body">
-            <h2 className="text-center text-4xl font-bold">425+</h2>
+            <h2 className="text-center text-4xl font-bold">35K+</h2>
             <p style={{ color: "#36AE7C" }} className="text-center text-lg">
-              Feedback
+              Review
             </p>
           </div>
         </div>
