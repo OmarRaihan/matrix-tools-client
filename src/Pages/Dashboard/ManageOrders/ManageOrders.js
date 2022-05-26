@@ -25,15 +25,16 @@ const ManageOrders = () => {
 
   return (
     <div>
-      <h2 className="text-center text-2xl font-bold mt-20">Orders: {manageOrders?.length}</h2>
+      <h2 className="text-center text-2xl font-bold mt-20">Manage Orders: {manageOrders?.length}</h2>
       <div className="overflow-x-auto mx-10 my-6">
         <table className="table w-full">
           <thead>
             <tr>
-              <th></th>
+              <th>NO.</th>
               <th>Name</th>
               <th>Address</th>
               <th>Phone</th>
+              <th>Product</th>
               <th>Quantity</th>
               <th>Action</th>
             </tr>
@@ -45,6 +46,7 @@ const ManageOrders = () => {
                 <td>{m.name}</td>
                 <td>{m.address}</td>
                 <td>{m.phone}</td>
+                <td>{m.product}</td>
                 <td>{m.quantity}</td>
                 {/* <td>
                   <Link to={`/dashboard/${a._id}`}>

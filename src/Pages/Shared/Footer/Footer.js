@@ -6,14 +6,16 @@ const Footer = () => {
   const today = new Date();
   const year = today.getFullYear();
   return (
-    <footer style={{ background: `url(${footer})`, backgroundSize: "cover" }} className="p-10">
+    <footer style={{ backgroundImage: "linear-gradient(315deg, #7ee8fa 0%, #36AE7C 74%", backgroundSize: "cover" }} className="p-10">
       <div className="footer mt-20 ">
         <div>
-          <span className="footer-title">Services</span>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <span className="footer-title">Products</span>
+          <a className="link link-hover">Drills</a>
+          <a className="link link-hover">Saws</a>
+          <a className="link link-hover">Hammers</a>
+          <a className="link link-hover">Pliers</a>
+          <a className="link link-hover">Wrenches</a>
+          <a className="link link-hover">Chisels</a>
         </div>
         <div>
           <span className="footer-title">Company</span>

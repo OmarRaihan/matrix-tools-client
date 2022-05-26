@@ -42,6 +42,9 @@ const Topbar = () => {
         <div className="btn btn-ghost normal-case hidden md:flex mx-auto">
           <p className="mr-6">Office: 0721-765640</p>
           <p>Mail: matrix@gmail.com</p>
+          <div>
+            <p className="ml-6">Login with: {user?.email}</p>
+          </div>
         </div>
       </div>
       <div className="navbar-center ml-auto mr-10">

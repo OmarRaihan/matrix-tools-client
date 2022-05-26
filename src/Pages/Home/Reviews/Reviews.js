@@ -9,7 +9,6 @@ import "../Reviews/Reviews.css";
 const Reviews = () => {
   const [user, loading] = useAuthState(auth);
   const [reviews, setReviews] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const getReview = async () => {
@@ -21,10 +20,6 @@ const Reviews = () => {
     getReview();
   }, [user]);
 
-  if (!user) {
-    navigate("/login");
-  }
-
   if (loading) {
     return <Loading />;
   }
@@ -32,7 +27,7 @@ const Reviews = () => {
   return (
     <div>
       <div className="my-5">
-        <h2 className="text-center text-4xl font-bold my-10">Reviews: ({reviews.length})</h2>
+        <h2 className="text-center text-4xl font-bold my-10">REVIEWS</h2>
         <hr />
       </div>
       <div className="review-container">

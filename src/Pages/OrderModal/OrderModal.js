@@ -5,8 +5,10 @@ import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const OrderModal = ({ order }) => {
-  const { name } = order;
+  const { name, price } = order;
   const [user] = useAuthState(auth);
+
+  const productName = order?.name;
 
   const handleOrder = (event) => {
     event.preventDefault();
@@ -16,8 +18,11 @@ const OrderModal = ({ order }) => {
       email: user?.email,
       address: event.target.address.value,
       phone: event.target.phone.value,
+      product: productName,
+      price: price,
       quantity: event.target.quantity.value,
     };
+    console.log(order);
 
     axios
       .post("http://localhost:5000/order", order)
@@ -52,6 +57,8 @@ const OrderModal = ({ order }) => {
             <input type="text" name="name" disabled value={user?.displayName || ""} className="input input-bordered w-full max-w-xs" />
 
             <input type="email" name="email" disabled value={user?.email || ""} className="input input-bordered w-full max-w-xs" />
+
+            <input type="text" name="product" placeholder="Product" disabled value={name} className="input input-bordered w-full max-w-xs" />
 
             <input type="text" name="address" placeholder="Address" required className="input input-bordered w-full max-w-xs" />
 

@@ -6,6 +6,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import auth from "../../../firebase.init";
 import "../AddReview/AddReview.css";
+
 const AddReview = () => {
   const { purchaseId } = useParams();
   const [user] = useAuthState(auth);
@@ -29,7 +30,7 @@ const AddReview = () => {
       email: user?.email,
     };
 
-    // Item Added to Review Collection
+    // Review Added to Review Collection
     axios
       .post("http://localhost:5000/review", review)
 

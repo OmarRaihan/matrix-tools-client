@@ -16,10 +16,13 @@ const Navbar = () => {
         <Link to="/blogs">Blogs</Link>
       </li>
       <li className="border-r">
-        <Link to="/products">Products</Link>
+        <Link to="/products">Featured</Link>
       </li>
       <li className="border-r">
         <Link to="/NewProducts">New</Link>
+      </li>
+      <li className="border-r">
+        <Link to="/portfolio">Portfolio</Link>
       </li>
       {/* <div class="dropdown border-r">
         <label tabIndex="0" className="btn btn-ghost font-bold text-lg m-1">
@@ -53,6 +56,7 @@ const Navbar = () => {
           </label>
           <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-bold">
             {menuItems}
+            
           </ul>
         </div>
       </div>
