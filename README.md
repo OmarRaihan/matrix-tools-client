@@ -13,4 +13,8 @@ Server Site link: [Matrix Server](https://thawing-hamlet-83781.herokuapp.com/).
 * Payment Gateway
 * Creative Home
 * Daisy UI
-* 
+* Tailwind
+* JWT
+* Axios
+* React Toastify
+* Stripe
